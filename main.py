@@ -1,7 +1,11 @@
+import os
+from dotenv import load_dotenv
 import tweepy
 import pandas as pd
 
-BEARER = "AAAAAAAAAAAAAAAAAAAAAJowagEAAAAA1rZqZ7Gdea2%2FPVgufnU03jrgzlg%3DN7pO0qoF4kTEeNIKPk1mijHJIRvHjcGygG89mxHYghwSw4fEGd"
+load_dotenv('.env')
+BEARER = os.environ.get('BEARER')
+print(BEARER)
 query = "twitter"
 limit = 500
 
